@@ -9,28 +9,43 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('companies', '0001_initial'),
+        ("companies", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Company',
+            name="Company",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('fund', models.TextField()),
-                ('status', models.TextField()),
-                ('investedinitially', models.BigIntegerField()),
-                ('totalcapitalinvested_JSV_Main', models.BigIntegerField()),
-                ('totalcapitalinvested_JSA_Side', models.BigIntegerField()),
-                ('totalcapitalinvested_JSV_JSA', models.BigIntegerField()),
-                ('totalcapitalraised', models.BigIntegerField()),
-                ('initialvaluation', models.BigIntegerField()),
-                ('realizedreturn', models.BigIntegerField()),
-                ('totalvalue', models.BigIntegerField()),
-                ('total_GainLoss', models.BigIntegerField()),
-                ('deallevelIRR', models.BigIntegerField()),
-                ('deallevelMOIC', models.BigIntegerField()),
-                ('companyname', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='company_companyname', to='companies.Companies')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("fund", models.TextField()),
+                ("status", models.TextField()),
+                ("investedinitially", models.BigIntegerField()),
+                ("totalcapitalinvested_JSV_Main", models.BigIntegerField()),
+                ("totalcapitalinvested_JSA_Side", models.BigIntegerField()),
+                ("totalcapitalinvested_JSV_JSA", models.BigIntegerField()),
+                ("totalcapitalraised", models.BigIntegerField()),
+                ("initialvaluation", models.BigIntegerField()),
+                ("realizedreturn", models.BigIntegerField()),
+                ("totalvalue", models.BigIntegerField()),
+                ("total_GainLoss", models.BigIntegerField()),
+                ("deallevelIRR", models.BigIntegerField()),
+                ("deallevelMOIC", models.BigIntegerField()),
+                (
+                    "companyname",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="company_companyname",
+                        to="companies.Companies",
+                    ),
+                ),
             ],
         ),
     ]
