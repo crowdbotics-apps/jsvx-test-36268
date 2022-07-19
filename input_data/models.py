@@ -12,9 +12,9 @@ class Input_data(models.Model):
     data_in = models.URLField()
     data_to_company = models.OneToOneField(
         "company_name.Company_name",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="input_data_data_to_company",
     )
 

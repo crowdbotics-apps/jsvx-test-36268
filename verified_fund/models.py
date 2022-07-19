@@ -13,9 +13,9 @@ class Verified_fund(models.Model):
     )
     funds_companies_list = models.OneToOneField(
         "companies.Companies",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="verified_fund_funds_companies_list",
     )
 

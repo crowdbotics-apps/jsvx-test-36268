@@ -7,14 +7,20 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('companies', '0001_initial'),
-        ('verified_fund', '0001_initial'),
+        ("companies", "0001_initial"),
+        ("verified_fund", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='verified_fund',
-            name='funds_companies_list',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='verified_fund_funds_companies_list', to='companies.Companies'),
+            model_name="verified_fund",
+            name="funds_companies_list",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="verified_fund_funds_companies_list",
+                to="companies.Companies",
+            ),
         ),
     ]
