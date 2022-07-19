@@ -37,6 +37,11 @@ urlpatterns = [
     path("api/v1/", include("company.api.v1.urls")),
     path("api/v1/", include("fund.api.v1.urls")),
     path("api/v1/", include("fundJSV_I_members.api.v1.urls")),
+    path("companies/", include("companies.urls")),
+    path("company/", include("company.urls")),
+    path("api/v1/", include("company_name.api.v1.urls")),
+    path("fund/", include("fund.urls")),
+    path("fundJSV_I_members/", include("fundJSV_I_members.urls")),
 ]
 
 admin.site.site_header = "JSVX Test"
