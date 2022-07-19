@@ -165,9 +165,9 @@ class Company_name(models.Model):
     notes = models.TextField()
     company_name = models.OneToOneField(
         "companies.Companies",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="company_name_company_name",
     )
 

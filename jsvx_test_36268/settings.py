@@ -74,6 +74,8 @@ INSTALLED_APPS = [
     "fund",
     "fundJSV_I_members",
     "company_name",
+    "user_profile",
+    "verified_fund",
 ]
 LOCAL_APPS = [
     "home",
