@@ -32,9 +32,9 @@ class User(AbstractUser):
         blank=True,
     )
     user_email = models.EmailField(
-        max_length=254,
         null=True,
         blank=True,
+        max_length=254,
     )
     user_ID = models.TextField(
         null=True,
