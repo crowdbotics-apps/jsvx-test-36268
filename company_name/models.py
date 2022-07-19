@@ -163,6 +163,13 @@ class Company_name(models.Model):
     date = models.DateField()
     description = models.TextField()
     notes = models.TextField()
+    company_name = models.OneToOneField(
+        "companies.Companies",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="company_name_company_name",
+    )
 
 
 # Create your models here.
