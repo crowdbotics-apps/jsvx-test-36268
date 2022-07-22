@@ -8,15 +8,29 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('company_name', '0002_company_name_company_name'),
+        ("company_name", "0002_company_name_company_name"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Saved_data',
+            name="Saved_data",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('database', models.ManyToManyField(related_name='saved_data_database', to='company_name.Company_name')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "database",
+                    models.ManyToManyField(
+                        related_name="saved_data_database",
+                        to="company_name.Company_name",
+                    ),
+                ),
             ],
         ),
     ]
