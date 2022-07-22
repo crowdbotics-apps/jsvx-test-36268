@@ -77,6 +77,7 @@ INSTALLED_APPS = [
     "user_profile",
     "verified_fund",
     "input_data",
+    "saved_data",
 ]
 LOCAL_APPS = [
     "home",
